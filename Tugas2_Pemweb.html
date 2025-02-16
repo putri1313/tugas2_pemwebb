@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITERA Parkir - Lapor Parkir</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+
+        header, footer {
+            background-color: #999999;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img, footer img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding-bottom: 80px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .news-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .news-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            display: inline-block;
+            text-align: center;
+            white-space: normal;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .news-card h3 {
+            margin: 10px 0;
+            word-wrap: break-word;
+        }
+
+        .news-card p {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Gambar/Logo_ITERA.png" alt="Logo ITERA">
+        <h1>ITERA Parkir</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Lapor Parkir</a></li>
+                <li><a href="berita.html">Berita Terkini</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulir Laporan Parkir</h2>
+            <form id="laporForm">
+                <label for="plat">Nomor Plat Kendaraan:</label>
+                <input type="text" id="plat" name="plat" required>
+
+                <label for="judul">Judul Kejadian:</label>
+                <input type="text" id="judul" name="judul" required>
+
+                <label for="bukti">Unggah Bukti Foto:</label>
+                <input type="file" id="bukti" name="bukti" accept="image/*" required>
+
+                <button type="submit">Kirim Laporan</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Berita Terkini</h2>
+            <div class="news-container">
+                <div class="news-card">
+                    <img src="Gambar/motor-gk2.png" alt="Parkir Liar">
+                    <h3>Parkir Liar</h3>
+                    <p>Parkir di area terlarang mengganggu aktivitas dan membahayakan pengguna jalan. Gunakan tempat parkir yang telah disediakan untuk kenyamanan bersama. Senin, 16/12/2024</p>
+                </div>
+                <div class="news-card">
+                    <img src="Gambar/motor-gk1.png" alt="Menghalangi Jalan">
+                    <h3>Menghalangi Jalan</h3>
+                    <p>Parkir berantakan mempersempit jalan dan menghambat lalu lintas, pastikan kendaraan terparkir rapi agar tidak mengganggu akses orang lain. Rabu, 01/01/2025</p>
+                </div>
+                <div class="news-card">
+                    <img src="Gambar/motor-gladiator.png" alt="Banyak Gaya">
+                    <h3>Tidak Mematuhi Aturan</h3>
+                    <p>Memarkir motor sembarangan di luar area parkir resmi. Parkirlah dengan tertib sesuai aturan. Senin, 10/02/2025</p>
+                </div>
+                <div class="news-card">
+                    <img src="Gambar/motor-4.png" alt="Menghalang">
+                    <h3> Parkir Sembarang</h3>
+                    <p>Motor yang diparkir asal-asalan membuat lingkungan kampus semrawut dan berisiko hilang atau rusak. Parkirlah dengan rapi dan aman. Kamis, 13/02/2025</p>
+                </div>
+                <div class="news-card">
+                    <img src="Gambar/motor-5.png" alt="Menghalang">
+                    <h3> Parkir Menutupi Jalan</h3>
+                    <p>Banyak kendaraan diparkir tanpa memperhatikan kerapihan dan melanggar aturan yang berlaku. Motor yang diletakkan sembarangan bisa menghambat akses kendaraan lain dan menyebabkan ketidaktertiban. Jum'at, 1/02/2025</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Peraturan Parkir Mahasiswa</h2>
+            <table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
+                <thead>
+                    <tr style="background-color: #999999; color: white;">
+                        <th style="border: 1px solid black; padding: 10px;">No</th>
+                        <th style="border: 1px solid black; padding: 10px;">Peraturan</th>
+                        <th style="border: 1px solid black; padding: 10px;">Sanksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px;">1</td>
+                        <td style="border: 1px solid black; padding: 10px;">Mahasiswa wajib memarkirkan kendaraan di area yang telah ditentukan.</td>
+                        <td style="border: 1px solid black; padding: 10px;">Jika mahasiswa melanggar maka ban kendaraan akan dikempeskan.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px;">2</td>
+                        <td style="border: 1px solid black; padding: 10px;">Dilarang parkir di area yang menghalangi kendaraan dan pejalan kaki.</td>
+                        <td style="border: 1px solid black; padding: 10px;">Peringatan tertulis dan pemindahan kendaraan oleh petugas.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px;">3</td>
+                        <td style="border: 1px solid black; padding: 10px;">Mahasiswa wajib membawa STNK.</td>
+                        <td style="border: 1px solid black; padding: 10px;">Bagi mahasiswa yang tidak membawa STNK dapat menunjukkan KTP.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 10px;">4</td>
+                        <td style="border: 1px solid black; padding: 10px;">Dilarang parkir pada daerah tempat parkir tenaga pendidik.</td>
+                        <td style="border: 1px solid black; padding: 10px;">Kendaraan akan dipindahkan petugas satpam.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+    <footer>
+        <img src="Gambar/Logo_ITERA.png" alt="Logo ITERA Parkir">
+        <h6>&copy; 2025 ITERA Parkir. INSTITUT TEKNOLOGI SUMATERA.</h6>
+    </footer>
+</body>
+</html>
